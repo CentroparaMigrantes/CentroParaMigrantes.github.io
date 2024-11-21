@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Centro de migrantes "Jesus Torres"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FBF8EF;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #FBF8EF;
+            padding: 10px 0;
+            border-bottom: 2px solid #63707a;
+        }
+
+        .nav-bar a {
+            color: #2C4A72;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .nav-bar a.active {
+            color: #e55312;
+        }
+
+        .nav-bar a:hover {
+            color: #e55312;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FBF8EF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .contact-info {
+            width: 48%;
+        }
+
+        .contact-info h1 {
+            color: #3d3d3d;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .map {
+            margin-top: 20px;
+        }
+
+        .map img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .form-container {
+            width: 48%;
+            background-color: #800000;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            background-color: #FBF8EF;
+        }
+
+        .form-container button {
+            background-color: #a52a2a;
+            color: #FBF8EF;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-container button:hover {
+            background-color: #6e1e1e;
+        }
+
+        .form-container label {
+            color: #FBF8EF;
+            font-weight: bold;
+        }
+        h1 {
+            text-align: left;
+            color: #5f7655;
+            font-family: 'Comic Sans MS', cursive; 
+        }
+        p {
+            text-align: left;
+            color: #5f7655;
+            font-family: 'Comic Sans MS', cursive; 
+        }
+
+    </style>
+
+    <script>
+        // JavaScript to handle form submission via the SheetDB API
+        function submitForm(e) {
+            e.preventDefault(); // Prevent form submission
+
+            var form = document.getElementById("donation-form");
+            var formData = new FormData(form);
+
+            // API URL provided by SheetDB
+            var apiUrl = "https://sheetdb.io/api/v1/7nx90ztncyjkh"; // Your SheetDB API URL
+
+            console.log("Sending data to API:", formData); // Debugging: log form data
+
+            fetch(apiUrl, {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response from SheetDB:", data); // Debugging: log API response
+                if (data) {
+                    alert("Datos enviados con éxito!");
+                    location.reload();  // Reload the page after successful submission
+                } else {
+                    alert("Error: No se pudo enviar los datos.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error: No se pudieron enviar los datos.");
+            });
+        }
+    </script>
+</head>
+<body> 
+    <h1><span style="color:#B68C57;">Centro de día para migrantes "Jesús Torres Fraire"</span></h1>
+    <nav class="nav-bar">
+        <a href="index.html#">INICIO</a>
+        <a href="historia.html#">HISTORIA</a>
+        <a href="programas.html">PROGRAMAS</a>
+        <a href="personal.html">FINANCIAMIENTO</a>
+        <a href="donativos.html">DONATIVOS</a>
+        <a href="contacto.html" class="active">CONTACTO</a> 
+    </nav>
+
+
+
+    <div class="container">
+        <div class="contact-info">
+            <h1>CONTACTO PARA DONACIÓN</h1>
+            <p><strong>Mandar mensaje o marcar a estos datos para pedir informes:</strong></p>
+            <h5> 📞Contáctanos al<strong> (871) 241-9119</strong></h5>
+            <h5>✉️ envíanos un correo: <a href="mailto:cdmjesustorres@gmail.com">cdmjesustorres@gmail.com</a></h5>
+            <h4>📸instagram: <A style="color:#2C4A72" href="https://www.instagram.com/cdm_jesustorres?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@cdm_jesustorres</A></h4>
+            <p>También contamos con donaciones en físico, donde las pueden dejar en el centro de día para migrantes:</p>
+            <p><strong>📍direccion:</strong></p>
+            <p>C. Yucatán 171, La Merced, 27296 Torreón, Coah.</p>
+            <A style="color: #6e1e1e;" target="_blank" HREF="https://www.google.com/maps/dir//C.+Yucat%C3%A1n+171,+La+Merced,+27296+Torre%C3%B3n,+Coah./@25.4987632,-103.4819977,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x868fdc8956433d27:0x7bfd91c94a7fbcc4!2m2!1d-103.3995962!2d25.4987862?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">click aqui para ir maps ->  🗺️</A>  
+            <a href=""></a>
+            <div class="map">
+                <img src="Imagen8.jpg" alt="Mapa de ubicación">
+            </div>
+        
+        </div>
+        <div class="form-container">
+            <form id="donation-form" onsubmit="submitForm(event)">
+                <label for="nombre">NOMBRE</label>
+                <input type="text" id="nombre" name="data[Nombre]" placeholder="Ingresa tu nombre" required>
+
+                <label for="correo">CORREO</label>
+                <input type="email" id="correo" name="data[Correo]" placeholder="Ingresa tu correo" required>
+
+                <label for="telefono">TELÉFONO</label>
+                <input type="tel" id="telefono" name="data[Telefono]" placeholder="Ingresa tu teléfono" required>
+
+                <label for="mensaje">MENSAJE</label>
+                <textarea id="mensaje" name="data[Mensaje]" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

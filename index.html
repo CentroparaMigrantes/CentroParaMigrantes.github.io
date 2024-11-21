@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Centro de migrantes "Jesús Torres"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FBF8EF;
+        }
+        
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #FBF8EF;
+            padding: 10px 0;
+            border-bottom: 2px solid #63707a;
+        }
+
+        .nav-bar a {
+            color: #2C4A72;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .nav-bar a.active {
+            color: #e55312;
+        }
+
+        .nav-bar a:hover {
+            color: #e55312;
+        }
+
+        .center-image {
+            display: block;
+            margin: auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: flex-end;
+            width: 80%;
+            padding: 20px;
+        }
+
+        .section {
+            text-align: center;
+            width: 30%;
+            margin: 0 10px;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .section h3 {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #333;
+            text-align: center;
+        }
+
+        .section p, .section ul {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.6em;
+        }
+
+        .section ul {
+            list-style-type: none;
+            text-align: CENTER;
+            padding: 0;
+        }
+
+        .objetivo-text {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            color: #516747;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color:#B68C57;">Centro de día para migrantes "Jesús Torres Fraire"</h1>
+    <nav class="nav-bar">
+        <a href="index.html#" class="active">INICIO</a>
+        <a href="historia.html#">HISTORIA</a>
+        <a href="programas.html">PROGRAMAS</a>
+        <a href="personal.html">FINANCIAMIENTO</a>
+        <a href="donativos.html">DONATIVOS</a>
+        <a href="contacto.html">CONTACTO</a>
+        
+    </nav>
+    
+    <img class="center-image" src="logo principal.jpeg" width="800" height="200" alt="Logo principal">
+    
+    <h2 style="text-align: center; color: #516747; margin-right: 20px;">Objetivo</h2>
+    <p class="objetivo-text">Brindar un servicio a la población en contexto de movilidad nacionales y extranjeros de asistencia humanitaria, acompañamiento y asesoría legal.</p>
+
+    <div class="container">
+        <div class="section">
+            <img src="Imagen1.jpg" alt="Misión">
+            <h3>MISIÓN</h3>
+            <p>Brindar acompañamiento a las y los migrantes que lo necesiten, renovando su esperanza a través de la solidaridad y trato digno que consiste en alimentación básica, servicios de salud, comunicación con sus familiares e información de la situación migratoria de nuestro país.</p>
+        </div>
+        <div class="section">
+            <img src="Imagen2.jpg" alt="Visión">
+            <h3>VISIÓN</h3>
+            <p>Brindar atención integral las 24 horas del día, que responda y satisfaga las
+                necesidades elementales de asistencia, medicas, psicológicas, albergue y
+                jurídicas de los migrantes, tomando en cuenta el contexto multicultural del
+                migrante con equidad y justicia y su perfil migratorio.</p>
+        </div>
+        <div class="section">
+            <img src="Imagen3.jpg" alt="Valores">
+            <h3>VALORES</h3>
+            <ul>
+                <li>- Solidaridad</li>
+                <li>- Transparencia</li>
+                <li>- Integridad</li>
+                <li>- Responsabilidad</li>
+                <li>- Humanidad</li>
+                <li>- Empatía</li>
+                <li>- Justicia</li>
+                <li>- Tolerancia</li>
+                <li>- Respeto</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<head>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #FBF8EF;
+        }
+
+        h3 {
+            text-align: left;
+            color: #516747;
+            font-family: 'Comic Sans MS', cursive; /* Cambia el tipo de letra del título "Programas" */
+        }
+
+        ul li {
+            font-family: 'Comic Sans MS', cursive; /* Cambia el tipo de letra de los elementos de la lista */
+            color: #666;
+        }
+    </style>
+</head>
+
+<head>
+    <style>
+        /* Estilo básico para la imagen */
+        .slideshow-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <img id="slideshow" class="slideshow-image" src="Imagen1.jpg" alt="Imagen Didáctica">
+
+    <script>
+        // Array con las rutas de las imágenes
+        const images = [
+            "Imagen1.jpg",
+            "Imagen2.jpg",
+            "Imagen3.jpg",
+            "Imagen4.jpg",
+            "Imagen5.jpg",
+            "Imagen6.jpg",
+            "Imagen7.jpg",
+            "Imagen8.jpg",
+            "Imagen9.jpg",
+            "imagen10.jpeg"
+        ];
+
+        // Índice inicial de la imagen
+        let currentIndex = 0;
+
+        // Cambiar la imagen cada 3 segundos (3000 ms)
+        setInterval(() => {
+            // Incrementa el índice de la imagen
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Actualiza el atributo "src" de la imagen
+            document.getElementById("slideshow").src = images[currentIndex];
+        }, 3000);
+    </script>
+
+</body>
+</html>
